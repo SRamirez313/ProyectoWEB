@@ -6,3 +6,6 @@
 
 # Integrantes 👥
 - Santiago Ramirez Madrigal sramirez50173@ufide.ac.cr
+- Abraham Chinchilla Aguilarachinchilla40299@ufide.ac.cr
+- Carlos Steven Aviles Roque caviles40908@ufide.ac.cr
+- Stefan Lutz Clarke slutz80582@ufide.ac.cr
