@@ -1,8 +1,16 @@
-# Tierra Fértil Web 🌲🏠
+#🌲🏠 Tierra Fértil Web 
 
-<h2>Proyecto Desarrollo de Aplicaciones Web y Patrones</h2>
+-Proyecto Desarrollo de Aplicaciones Web y Patrones-
 
 <p>Es un sistema de gestión inmobiliaria diseñado para centralizar la administración de propiedades, clientes y solicitudes de una empresa inmobiliaria.</p>
 
-# Integrantes 👥
-- Santiago Ramirez Madrigal sramirez50173@ufide.ac.cr
+## Integrantes
+
+- Abraham Chinchilla
+- Santiago Ramirez Madrigal
+- Stefan Lutz Clarke
+- Carlos Steven Aviles Roque 
+
+## Estado del Proyecto
+
+🚧 En desarrollo
