@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crear cuenta - TierraFertil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<div class="container py-5" style="max-width: 480px;">
+    <h2 class="mb-4">Crear cuenta</h2>
+
+    <div th:if="${registroExitoso}" class="alert alert-success">
+        Cuenta creada correctamente. Ya podes iniciar sesion.
+    </div>
+    <div th:if="${errorCorreo}" class="alert alert-danger" th:text="${errorCorreo}"></div>
+
+    <form th:action="@{/registro}" th:object="${registroDTO}" method="post">
+        <div class="mb-3">
+            <label class="form-label">Nombre completo</label>
+            <input type="text" th:field="*{nombre}" class="form-control"
+                   th:classappend="${#fields.hasErrors('nombre')} ? 'is-invalid'">
+            <div class="invalid-feedback" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Correo</label>
+            <input type="email" th:field="*{correo}" class="form-control"
+                   th:classappend="${#fields.hasErrors('correo')} ? 'is-invalid'">
+            <div class="invalid-feedback" th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}"></div>
+            <div class="form-text">Tiene que ser unico en el sistema.</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Contrasena</label>
+            <input type="password" th:field="*{contrasena}" class="form-control"
+                   th:classappend="${#fields.hasErrors('contrasena')} ? 'is-invalid'">
+            <div class="invalid-feedback" th:if="${#fields.hasErrors('contrasena')}" th:errors="*{contrasena}"></div>
+            <div class="form-text">Minimo 8 caracteres. Se guarda cifrada con BCrypt.</div>
+        </div>
+
+        <div class="mb-3">
+            <span class="badge bg-secondary">Rol asignado: CLIENTE</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
+    </form>
+
+    <p class="mt-3 text-center">
+        ¿Ya tenes cuenta? <a th:href="@{/login}">Inicia sesion</a>
+    </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

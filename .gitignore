@@ -29,3 +29,4 @@ bin/
 ### Archivos subidos por usuarios (no versionar imagenes reales) ###
 src/main/resources/static/uploads/**
 !src/main/resources/static/uploads/.gitkeep
+src/main/resources/application.properties
